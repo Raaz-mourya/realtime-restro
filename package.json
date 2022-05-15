@@ -1,0 +1,43 @@
+{
+  "name": "yarn",
+  "installationMethod": "msi",
+  "version": "1.22.18",
+  "packageManager": "yarn@1.22.17",
+  "license": "BSD-2-Clause",
+  "preferGlobal": true,
+  "description": "This is real time food ordering website",
+  "resolutions": {
+    "sshpk": "^1.14.2"
+  },
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "repository": "https://github.com/yarnpkg/yarn",
+  "bin": {
+    "yarn": "./bin/yarn.js",
+    "yarnpkg": "./bin/yarn.js"
+  },
+  "scripts": {
+    "preinstall": ":; (node ./preinstall.js > /dev/null 2>&1 || true)"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "main": "index.js",
+  "author": "Raj Singh",
+  "scripts": {
+    "serve": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  
+  "dependencies": {
+    "ejs": "^3.1.7",
+    "express": "^4.18.0",
+    "express-ejs-layouts": "^2.5.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
