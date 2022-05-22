@@ -1,2 +1,1 @@
-console.log('Hello from app js');
-alert('hello world');
+console.log('Hello from js raj');
