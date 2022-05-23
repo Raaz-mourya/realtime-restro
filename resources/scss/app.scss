@@ -41,3 +41,26 @@ section.hero {
     row-gap: 60px;
     column-gap: 50px;
 }
+.btn-primary {
+    background: $primary;
+    transition: $smooth;
+    &:hover {
+        background: $primary-hover;
+    }
+}
+section.cart {
+    background: $secondary;
+    .amount {
+        color: $primary;
+    }
+}
+section.login {
+    background: $secondary;
+    height:calc(100vh - 95px);
+    a {
+        color: $primary;
+        &:hover {
+            color: $primary-hover;
+        }
+    }
+}
