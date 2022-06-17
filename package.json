@@ -33,10 +33,13 @@
   "author": "Raj Singh",
   "dependencies": {
     "cross-env": "^7.0.3",
+    "dotenv": "^16.0.1",
     "ejs": "^3.1.7",
     "express": "^4.18.0",
     "express-ejs-layouts": "^2.5.1",
-    "laravel-mix": "^6.0.43"
+    "express-session": "^1.17.3",
+    "laravel-mix": "^6.0.43",
+    "mongoose": "^6.3.8"
   },
   "devDependencies": {
     "nodemon": "^2.0.15",
