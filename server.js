@@ -1,4 +1,4 @@
-// require('dotenv').config()
+require('dotenv').config()
 const express = require('express')
 const app = express()
 
@@ -9,15 +9,8 @@ const expressLayout = require('express-ejs-layouts')
 const PORT = process.env.PORT || 3000
 const mongoose = require('mongoose')
 const session = require('express-session')
-// const flash = require('express-flash')
-// const MongoDbStore = require('connect-mongo')(session)
-// before this run command
-// yarn add express-flash
-// yarn add connect-mongo
-
-
-
-
+const flash = require('express-flash')
+//const MongoDbStore = require('connect-mongo')(session)
 
 //Database connection
 const url = 'mongodb://localhost/pizza';
@@ -31,19 +24,23 @@ connection.once('open', function () {
 
 // Session store
 // let mongoStore = new MongoDbStore({
-//                mongooseConnection: connection,
-//                collection: 'session'
+//                 mongooseConnection: connection,
+//                 collection: 'sessions'
 // })
-//session config
-// app.use(session({
-//     secret: process.env.COOKIE_SECRET,
-//     resave: false,
-//     store: mongoStore,
-//     saveUninitialized: false,
-//     cookie: {maxAge:1000 * 60 * 60 * 24 }
-// }))
 
-//asset
+//session config
+app.use(session({
+   secret: process.env.COOKIE_SECRET,
+   resave: false,
+   //store: mongoStore,
+   saveUninitialized: false,
+   cookie: { maxAge: 1000 * 60 *60 * 24 } //24 hours
+}))
+
+
+app.use(flash())
+
+//Asset
 app.use(express.static('public'))
 
 

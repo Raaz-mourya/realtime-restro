@@ -11,7 +11,7 @@
       "$oid": "5eee6671a27a66807cf2bea3"
     },
     "name": "Sandwich",
-    "image": "sandwich.jpg",
+    "image": "pizza.png",
     "price": "90",
     "size": "medium"
   },{
@@ -19,7 +19,7 @@
       "$oid": "5eee6692a27a66807cf2bea4"
     },
     "name": "Hakka Noodles",
-    "image": "hakka-noodles.jpg",
+    "image": "pizza.png",
     "price": "200",
     "size": "large"
   },{
@@ -27,7 +27,7 @@
       "$oid": "5eee66a5a27a66807cf2bea5"
     },
     "name": "Veg Burger",
-    "image": "Veg-Burger.jpg",
+    "image": "pizza.png",
     "price": "70",
     "size": "large"
   },{
@@ -35,7 +35,7 @@
       "$oid": "5eee66c4a27a66807cf2bea6"
     },
     "name": "Veg Roll",
-    "image": "Veg-Roll.jpg",
+    "image": "pizza.png",
     "price": "120",
     "size": "large"
   },{
@@ -43,7 +43,7 @@
       "$oid": "5eee66cfa27a66807cf2bea7"
     },
     "name": "Chocolate Shake",
-    "image": "chocolate-shake.jpg",
+    "image": "pizza.png",
     "price": "90",
     "size": "large"
   },{
@@ -59,15 +59,8 @@
       "$oid": "5eee6717a27a66807cf2bea9"
     },
     "name": "Tomato Soup",
-    "image": "tomato-soup.jpg",
+    "image": "pizza.png",
     "price": "150",
     "size": "medium"
-  },{
-  "_id": {
-    "$oid": "627c061bec65ae2e3464e50a"
-  },
-    "name": "French Fries",
-    "image": "french-fries.png",
-    "price": "100",
-    "size": "large"}
+  }
   ]

@@ -6,11 +6,8 @@ function homeController() {
             //     console.log(pizzas)
             //     return res.render('home', {pizzas: pizzas })
             // })
-
-
-            // const pizzas = await Menu.find()
-            // console.log(pizzas);
-            // return res.render('home', { pizzas: pizzas })
+            const pizzas = await Menu.find()
+            return res.render('home', { pizzas: pizzas })
             
         }
     }

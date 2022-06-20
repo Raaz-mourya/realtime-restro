@@ -1,6 +1,6 @@
 [+] Create directory structure
 [+] Create a NPM project and install all dependancies
-    - dependancies
+    [+] dependancies
         - express
         - ejs express-ejs-layouts
     - Dev dependancies
@@ -12,8 +12,8 @@
 [+] Install tailwind css
 [+] Create homepage using Html and css
 [+] Create Cart page
-    - order summary section 
-    - empty cart section
+    [+] order summary section 
+    [+] empty cart section
 [+] move routes to routes files
 [+] create dedicated controllers
 [.] Add to cart functionality
