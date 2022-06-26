@@ -5,18 +5,15 @@ const offerController = require('../app/http/controllers/offerController')
 
 
 function initRoutes(app) {
-    
-    
 
     app.get('/', homeController().index)
-
     app.get('/offer', offerController().offer)
-
-    app.get('/cart',cartController().index)
-    
     app.get('/login', authController().login)
-    
     app.get('/register', authController().register)
+
+    
+    app.get('/cart',cartController().index)
+    app.post('/update-cart', cartController().update)
 
 }
 module.exports = initRoutes

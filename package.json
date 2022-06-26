@@ -32,6 +32,7 @@
   "main": "index.js",
   "author": "Raj Singh",
   "dependencies": {
+    "axios": "^0.27.2",
     "connect-mongo": "^4.6.0",
     "cross-env": "^7.0.3",
     "dotenv": "^16.0.1",
@@ -41,7 +42,8 @@
     "express-flash": "^0.0.2",
     "express-session": "^1.17.3",
     "laravel-mix": "^6.0.43",
-    "mongoose": "^6.3.8"
+    "mongoose": "^6.3.8",
+    "noty": "^3.2.0-beta-deprecated"
   },
   "devDependencies": {
     "nodemon": "^2.0.15",
