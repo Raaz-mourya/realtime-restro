@@ -17,26 +17,32 @@
 [+] move routes to routes files
 [+] create dedicated controllers
 [+] Add to cart functionality
-    [+] connect to mongo db
-    [+] use connect-mongo for session store
-        - dependancies
-            - mongoose, express-session, connect-mongo, dotenv
-        - axios to send ajax request
-        - install notification library npm i noty  https://ned.im/noty/#/
+    [+] Fetch all pizzas from db and show on home page
+    [+] Create menu model and put dummy Data
+        - connect to mongo db
+        - use connect-mongo for session store
+            - dependancies
+                - mongoose, express-session, connect-mongo, dotenv
+    - axios to send ajax request
+    - install notification library npm i noty   https://ned.im/noty/#/
 [+] Create login page with route
 [+] Create register page with route
-[.] Build register crud
+[+] Build register crud
     - dependancies express-flash express-session dotenv
     - status code article https://www.restapitutorial.com/httpstatuscodes.Html
-[.] Build login using passport
+[+] Build login using passport
     - install dependancies passport passport-local express-session
-[.] Create Order controller and link it in server.js
-[.] Create Orders view with table for customer and admin
-[.] Create Orders single page with status
-[.] Make order on carts page
+[+] Create Order controller and link it in server.js
+[+] Create Orders view with table for customer and admin
 [.] Place order functionality
+[.] Show all my orders on customer orders page
+[.] Show orders on admin orders page
+[.] Create Orders single page with status
 [.] Order tracker
     - dependancies moment
 [.] Socket connection
     - dependancies socket.io
 [.] Build project for deployment
+[.] Deploy project on live server
+
+[.] Make order on carts page
