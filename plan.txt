@@ -34,11 +34,11 @@
     - install dependancies passport passport-local express-session
 [+] Create Order controller and link it in server.js
 [+] Create Orders view with table for customer and admin
-[.] Place order functionality
-[.] Show all my orders on customer orders page
-[.] Show orders on admin orders page
-[.] Create Orders single page with status
-[.] Order tracker
+[+] Place order functionality
+[+] Show all my orders on customer orders page
+[+] Show orders on admin orders page
+[+] Create Orders single page with status
+[+] Order tracker
     - dependancies moment
 [.] Socket connection
     - dependancies socket.io
