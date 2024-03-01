@@ -2,7 +2,7 @@ const homeController = require("../app/http/controllers/homeController");
 const authController = require("../app/http/controllers/authController");
 const cartController = require("../app/http/controllers/customers/cartController");
 const orderController = require("../app/http/controllers/customers/orderController");
-const offerController = require("../app/http/controllers/offerController");
+// const offerController = require("../app/http/controllers/offerController");
 
 const adminOrderController = require("../app/http/controllers/admin/orderController");
 const statusController = require("../app/http/controllers/admin/statusController");
@@ -14,7 +14,7 @@ const admin = require("../app/http/middleware/admin");
 
 function initRoutes(app) {
   app.get("/", homeController().index);
-  app.get("/offer", offerController().offer);
+  // app.get("/offer", offerController().offer);
   app.get("/login", guest, authController().login);
   app.post("/login", authController().postLogin);
   app.get("/register", guest, authController().register);

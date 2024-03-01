@@ -56,10 +56,11 @@ function authController() {
           req.flash("error", "Email already taken");
           req.flash("name", name);
           req.flash("email", email);
+          
           return res.redirect("/register");
         }
       });
-      //Hash paswword
+      //Hash password
       const hashedPassword = await bcrypt.hash(password, 10);
 
       // Create a user
@@ -77,11 +78,10 @@ function authController() {
           return res.redirect("/");
         })
         .catch((err) => {
+          console.log(err)
           req.flash("error", "Something went wrong");
           return res.redirect("/register");
         });
-
-      console.log(req.body);
     },
     logout(req, res) {
       // req.session.destroy;

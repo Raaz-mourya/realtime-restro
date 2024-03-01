@@ -1,23 +1,23 @@
 <section class="hero py-16">
     <div class="container mx-auto flex items-center justify-between">
         <div class="w-1/2">
-            <h6 class="text-lg"><em>Are you hungry?</em></h6>
-            <h1 class="text-6xl font-bold">Don't wait !</h1>
-            <button class="px-6 py-2 rounded-full text-white font-bold mt-4 btn-primary">Order Now</button>
+            <h6 class="text-lg lg:text-xl"><em>Are you hungry?</em></h6>
+            <h1 class="text-3xl md:text-6xl lg:text-12xl font-bold">Don't wait !</h1>
+            <a class="hero-btn px-3 py-1 md:px-6 md:py-3 text-xs md:text-base rounded-full text-white font-bold mt-4 btn-primary" href="#menu">Order Now</a>
         </div>
         <div class="w-1/2">
-            <img src="/img/hero-pizza.png" alt="main-img">
+            <img src="https://res.cloudinary.com/dpwtq5rgs/image/upload/v1708767681/food%20images/pizza4_d0bnti.png" alt="main-img">
         </div>
     </div>
 </section>
 
-<section class="menu container mx-auto py-8">
+<section id="menu" class="menu container mx-auto py-8">
     <h1 class="text-xl font-bold mb-8">All Pizzas</h1>
-    <div class="grid grid-cols-4 col-gap-12 row-gap-16 grid1">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 grid1">
         <% pizzas.forEach(function(pizza) { %>
 
-        <div class="w-64">
-            <img class="h-40 mb-4 mx-auto" src="/img/<%= pizza.image %>" alt="pizza img">
+        <div class="w-full md:w-64 card-box">
+            <img class="mb-4 mx-auto" src="<%= pizza.image %>" alt="pizza img" />
             <div class="text-center">
                 <h2 class="mb-4 text-lg"><%= pizza.name %></h2>
                 <span class="size py-1 px-4 rounded-full uppercase text-xs"><%= pizza.size %></span>
@@ -35,3 +35,53 @@
     </div>
    
 </section>
+
+    <footer>
+      <div class="flex justify-center ">
+        <div class="f-nav md:mx-6 p-4">
+          <ul>
+            <li class="mt-2"><a href="/">Menu</a></li>
+            <% if(user) { %> <% if(user.role == 'admin') { %>
+            <li class="mt-2"><a href="/admin/orders">Customer Orders</a></li>
+            <% } else {%>
+            <li class="mt-2"><a href="/customer/orders">My Orders</a></li>
+            <% } %>
+            <li class="mt-2">
+              <form id="logout" action="/logout" method="POST">
+                <a
+                  onclick="document.getElementById('logout').submit()"
+                  role="button"
+                  >Logout</a
+                >
+              </form>
+            </li>
+            <li class="mt-2 text-red-800"><a href="/"><%= user.name %></a></li>
+            <% } else { %>
+            <li class="mt-2"><a href="/register">Register</a></li>
+            <li class="mt-2"><a href="/login">Login</a></li>
+            <% } %>
+          </ul>
+        </div>
+        <div class="social md:mx-6 p-4">
+          <ul>
+            <li>
+              <img src="/img/gmail.png" alt="gmail-icon" />
+              raj123singhmourya@gmail.com
+            </li>
+            <li>
+              <img src="/img/phone-call.png" alt="phone-icon" /> +91 7015736401
+            </li>
+            <li>
+              <img src="/img/github.png" alt="github-icon" />
+              https://github.com/Raaz-mourya
+            </li>
+            <li>
+              <img src="/img/instagram.png" alt="instagram-icon" /> @i.am.raaz99
+            </li>
+          </ul>
+        </div>
+      </div>
+      <p class="text-center text-gray-500 text-xs">
+        &copy;2022 Restro. All rights reserved.
+      </p>
+    </footer>

@@ -1,192 +1,392 @@
-@import './variables';
-@import '~noty/src/noty.scss';
-@import '~noty/src/themes/mint.scss';
-
+@import "./variables";
+@import "~noty/src/noty.scss";
+@import "~noty/src/themes/mint.scss";
 
 body {
-    font-family: 'Lato', sans-serif;
-    -webkit-font-smoothing: antialiased;
-    color: $dark;
+  font-family: "Lato", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: $dark;
+}
+.dummyCard p {
+  color: 333;
+  line-height: 1rem;
 }
 
-nav li:last-child a {
-    background-color: $primary;
-    &:hover {
-        background-color: $primary-hover;
-    }
+nav.container {
+  max-width: 100%;
 }
+.container {
+  max-width: 90%;
+}
+nav {
+  background: fixed;
+  background-color: $yellow_dark;
+}
+
+.cart-btn {
+  background-color: $primary;
+  outline: none;
+  &:hover {
+    background-color: $primary-hover;
+  }
+}
+
 nav li a {
-    transition: $smooth;
-    &:hover {
-        color: $primary;
-    }
+  transition: $smooth;
+  &:hover {
+    color: $primary;
+  }
+}
+
+.menu-bar {
+  margin-left: 20px;
+  width: 25px;
+  height: auto;
+  display: none;
+}
+.menu-bar img {
+  cursor: pointer;
 }
 
 section.hero {
-    background-color: $secondary;
+  background-color: $secondary;
 }
+
 .size {
-    background: $secondary;
+  background: $secondary;
+}
+
+.hero-btn {
+  margin-top: 10px;
+  display: inline-block;
 }
 
 .add-to-cart {
-    border: 2px solid $primary;
-    color:$primary;
-    transition: $smooth;
-    &:hover {
-        background: $primary;
-        border-color: $pure;
-        color:$pure;
-    }
-    &:focus {
-        outline: none;
-    }
+  border: 2px solid $primary;
+  color: $primary;
+  transition: $smooth;
+  &:hover {
+    background: $primary;
+    border-color: $pure;
+    color: $pure;
+  }
+  &:focus {
+    outline: none;
+  }
 }
 .grid1 {
-    row-gap: 60px;
-    column-gap: 50px;
+  row-gap: 60px;
+  column-gap: 50px;
 }
+
+.card-box {
+  padding: 8px;
+  padding-bottom: 20px;
+  border-radius: 10px;
+  background-color: $yellow_light;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+.card-box img {
+  width: auto;
+  height: 220px;
+  border-radius: 10px;
+}
+
 .btn-primary {
-    background: $primary;
-    transition: $smooth;
-    &:hover {
-        background: $primary-hover;
-    }
+  background: $primary;
+  transition: $smooth;
+  &:hover {
+    background: $primary-hover;
+  }
 }
+
 section.cart {
-    background: $secondary;
-    .amount {
-        color: $primary;
-    }
+  background: $secondary;
+  .amount {
+    color: $primary;
+  }
 }
 section.login {
-    background: $secondary;
-    height:calc(100vh - 95px);
-    a {
-        color: $primary;
-        &:hover {
-            color: $primary-hover;
-        }
+  background: $secondary;
+  height: calc(100vh - 95px);
+  a {
+    color: $primary;
+    &:hover {
+      color: $primary-hover;
     }
+  }
 }
 
 .noty_theme__mint {
-    border-radius: 50px!important;
-    padding-left: 8px!important;
+  border-radius: 50px !important;
+  padding-left: 8px !important;
 }
 a.link {
-    color: $primary;
+  color: $primary;
 }
 
 section.status {
-    background: $secondary;
-    min-height: calc(100vh - 86px);
+  background: $secondary;
+  min-height: calc(100vh - 86px);
 }
 .status-box {
-    padding: 60px 0 0;
+  padding: 60px 0 0;
 }
 
 .status-box ul {
-    margin-left: 84px;
+  margin-left: 84px;
 }
 .status-box ul li span {
-    position: relative;
+  position: relative;
 }
 // Dots
 .status-box ul li span:after {
-    content: '';
-    position: absolute;
-    left: -20px;
-    top: 50%;
-    background: $dark;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    transform: translateY(-50%);
-    box-shadow: 0 0 1px 10px $secondary;
+  content: "";
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  background: $dark;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  box-shadow: 0 0 1px 10px $secondary;
 }
 
 // Icons
 .status-box ul li span:before {
-    font-family: "Line Awesome Free";
-    font-size: 46px;
-    font-weight: 600;
-    position: absolute;
-    left: -90px;
-    top: 50%;
-    transform: translateY(-50%);
+  font-family: "Line Awesome Free";
+  font-size: 46px;
+  font-weight: 600;
+  position: absolute;
+  left: -90px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .status-box ul li:nth-child(1) span:before {
-    content: '\f46c';
+  content: "\f46c";
 }
 .status-box ul li:nth-child(2) span:before {
-    content: '\f560';
+  content: "\f560";
 }
 .status-box ul li:nth-child(3) span:before {
-    content: '\f818';
+  content: "\f818";
 }
 .status-box ul li:nth-child(4) span:before {
-    content: '\f0d1';
+  content: "\f0d1";
 }
 .status-box ul li:nth-child(5) span:before {
-    content: '\f582';
+  content: "\f582";
 }
 
 .status-box ul li {
-    position: relative;
+  position: relative;
 }
 
 // Lines
 .status-box ul li:before {
-    content: '';
-    position: absolute;
-    width: 2px;
-    height: 100%;
-    left: -16px;
-    top: 0;
-    background: $dark;
-    margin-top: 10px;
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  left: -16px;
+  top: 0;
+  background: $dark;
+  margin-top: 10px;
 }
 // Last line
 .status-box ul li:last-child:before {
-    width: 0;
-    height: 0;
-    background: $secondary;
+  width: 0;
+  height: 0;
+  background: $secondary;
 }
 
 // Last dot
 .status-box ul li:nth-child(5) span:after {
-    box-shadow: 0 0px 1px 0px $primary;
+  box-shadow: 0 0px 1px 0px $primary;
 }
 
 // Line
 .status-box ul li.step-completed:before {
-    background: $gray;
+  background: $gray;
 }
 // Dot
 .status-box ul li.step-completed span:after {
-    background: $gray;
+  background: $gray;
 }
 // Text
 .status-box ul li.step-completed span {
-    color: $gray;
+  color: $gray;
 }
 
 // Current status
 // Dot
 .status-box ul li.current span:after {
-    background: $primary;
+  background: $primary;
 }
 
 // Text
 .status-box ul li.current span {
+  color: $primary;
+}
+
+.status-box ul li small {
+  float: right;
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+// Footer
+
+footer {
+  background-color: $yellow_light;
+  color: $dark;
+  width: 100%;
+}
+footer > p {
+  padding-bottom: 20px;
+}
+
+.f-nav li {
+  transition: $smooth;
+  padding: 4px 14px;
+  border-radius: 8px;
+  &:hover {
     color: $primary;
+    background-color: $pure;
+  }
+}
+
+.social li {
+  margin-bottom: 10px;
+  transition: $smooth;
+  padding: 4px;
+  border-radius: 8px;
+  &:hover {
+    color: $primary;
+    background-color: $pure;
+  }
+}
+
+.social img {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  margin-right: 15px;
 }
 
 
-.status-box ul li small {
-    float: right;
-    font-size: 14px;
-    margin-top: 8px;
+// media query for responsive
+
+@media (max-width: 1060px) {
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+@media (max-width: 768px) {
+  .status-box ul li span:before {
+    font-size: 34px;
+    left: -70px;
+  }
+}
+
+@media (max-width: 620px) {
+  .container {
+    padding: 0x;
+  }
+  .right {
+    width: 60%;
+  }
+  .right ul {
+    text-align: center;
+  }
+  .navItems li {
+    margin-left: 0.5rem;
+  }
+  .cart-btn img {
+    transform: scale(0.7);
+  }
+
+  .navItems {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: 80px;
+    left: 0;
+    color: #cfd7df;
+    background-color: #111;
+  }
+  .navItems.active {
+    display: block;
+  }
+  .navItems li a {
+    font-size: 1.5rem;
+  }
+  .navItems li {
+    padding: 0.5rem;
+    margin: 0;
+    border-bottom: 2px solid #fff;
+    transition: $smooth;
+    &:hover {
+      color: #111;
+      background-color: $yellow_hover;
+    }
+  }
+
+  .menu-bar {
+    display: block;
+  }
+  
+
+  #payment-form {
+    width: 100%;
+  }
+  #payment-form input {
+    display: block;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  nav div:first-child {
+    transform: scale(0.8);
+  }
+}
+
+@media ( max-width: 460px ) {
+  footer > div {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+
+.StripeElement {
+  box-sizing: border-box;
+  margin-left: auto;
+  height: 40px;
+  padding: 10px 12px;
+  border: 1px solid gray;
+  border-radius: 4px;
+  background-color: white;
+  box-shadow: 0 1px 3px 0 #e6ebf1;
+  -webkit-transition: box-shadow 150ms ease;
+  transition: box-shadow 150ms ease;
+}
+
+.StripeElement--focus {
+  box-shadow: 0 1px 3px 0 #cfd7df;
+}
+
+.StripeElement--invalid {
+  border-color: #fa755a;
+}
+
+.StripeElement--webkit-autofill {
+  background-color: #fefde5 !important;
 }
