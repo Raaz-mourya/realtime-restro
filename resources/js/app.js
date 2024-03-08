@@ -8,7 +8,6 @@ import moment from "moment";
 const elmt = document.querySelector("#navMenuIcon");
 
 elmt.addEventListener('click', (e) => {
-  console.log("menu clicked")
   if (elmt.name === "menu") {
     elmt.src = "/img/close.png";
     elmt.name = "close"

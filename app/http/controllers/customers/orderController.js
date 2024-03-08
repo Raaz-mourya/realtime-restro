@@ -40,7 +40,7 @@ function orderController() {
                     placedOrder.paymentStatus = true;
                     placedOrder.paymentType = paymentType;
 
-                    console.log(status.client_secret);
+                    // console.log(status.client_secret);
 
                     placedOrder
                       .save()

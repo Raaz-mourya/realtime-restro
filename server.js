@@ -17,7 +17,8 @@ const Emitter = require("events");
 mongoose.set("strictQuery", false); // to hide special warning
 
 //Database connection
-const url = "mongodb://localhost:27017/pizza";
+const url = process.env.MONGO_CONNECTION_URL;
+
 mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true });
 const connection = mongoose.connection;
 connection
